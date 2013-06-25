@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="110px" height="110px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>burger</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page 1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(18.000000, 29.000000)">
+            <path d="M5.00613538,40 C2.24132316,40 0,42.2441952 0,45 L0,45 C0,47.7614237 2.23011973,50 5.00613538,50 L64.9938646,50 C67.7586768,50 70,47.7558048 70,45 L70,45 C70,42.2385763 67.7698803,40 64.9938646,40 L5.00613538,40 Z M5.00613538,40" id="rect3757-4" fill="#4FA1DB"></path>
+            <path d="M5.00613538,20 C2.24132316,20 0,22.2441952 0,25 L0,25 C0,27.7614237 2.23011973,30 5.00613538,30 L64.9938646,30 C67.7586768,30 70,27.7558048 70,25 L70,25 C70,22.2385763 67.7698803,20 64.9938646,20 L5.00613538,20 Z M5.00613538,20" id="rect3757-3" fill="#D4C42E"></path>
+            <path d="M5.00613538,0 C2.24132316,0 0,2.24419519 0,5 L0,5 C0,7.76142375 2.23011973,10 5.00613538,10 L64.9938646,10 C67.7586768,10 70,7.75580481 70,5 L70,5 C70,2.23857625 67.7698803,0 64.9938646,0 L5.00613538,0 Z M5.00613538,0" id="rect3757-1" fill="#CB0078"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,385 @@
+body {
+  background-color: #e1e1e8;
+}
+
+html, body, .container, .row-fluid, #page {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #222222;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 1024px;
+  -webkit-backface-visibility: hidden;
+}
+
+#page {
+  padding: 0;
+  background-color: gray;
+  width: 768px;
+  margin: 0;
+}
+
+#page section>* {
+  padding: 0 75px;
+}
+
+#page section {
+  background: white;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Cover */
+
+#page header {
+  padding: 0;
+  margin: 0;
+  height: 1004px; /* 1024 - statusbar height */
+  background: #eeeeee;
+}
+
+#page p.publisher {
+  font-size: 50px;
+  line-height: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0 75px;
+}
+
+#page p.author {
+  margin: 0;
+  padding: 0 75px;
+  font-size: 50px;
+  line-height: 100px;
+  padding-top: 25px;
+}
+
+#page h1 {
+  font-size: 100px;
+  line-height: 100px;
+  padding: 0 75px;
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+#page .logo {
+  height: 454px; /* 1024 - 500 - 50 - 20 (statusbar height) */
+}
+
+/* Chapter title */
+
+#page h2 {
+  font-size: 55px;
+  line-height: 84px;
+  margin: 0 0 84px 0;
+  padding: 137px 90px;
+  background: #eeeeee;
+}
+
+#page h3 {
+  font-size: 55px;
+  line-height: 55px;
+  margin: 0 0 52px 0;
+  padding: 0px 75px;
+}
+
+#page h4 {
+  font-size: 32px;
+  line-height: 34px;
+  margin: 0 0 32px 0;
+  padding: 0px 75px;
+}
+
+#page h5 {
+  font-size: 21px;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+
+#page p, #page ul, #page ol, #page li {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+#page p, #page ul, #page ol {
+  margin-bottom: 34px;
+}
+
+#page figure, #page video {
+  margin: 0 75px 40px 75px;
+  padding: 0;
+  text-align: center;
+  outline: solid 1px #ddd;
+  background: white;
+}
+
+#page video {
+  width: 618px;
+  height: 348px;
+}
+
+#page figcaption {
+  padding: 13px;
+  line-height: 21px;
+}
+
+#page blockquote {
+  margin-bottom: 40px;
+}
+
+#page blockquote {
+  font-size: 21px;
+  border-left-color: #ddd;
+  margin-left: 55px;
+  padding-left: 15px !important;
+  line-height: 30px;
+}
+
+/* Backmatter */
+
+#page #backmatter {
+  padding: 0 0 40px 0;
+}
+
+#page #backmatter>* {
+  padding: 0 75px;
+}
+
+#page #backmatter h2 {
+  background: none;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 100px 75px;
+}
+
+#page #copyright {
+  margin: 0 !important;
+  padding: 25px 75px;
+}
+
+/* End of page fixes */
+
+#page section p:last-child,
+#page section ul:last-child {
+  padding-bottom: 80px;
+  margin-bottom: 0px;
+}
+
+#page section div.slideshow:last-child {
+  margin-bottom: 0;
+}
+
+/* Slideshow */
+
+#page div.slideshow {
+  overflow: hidden;
+  background: #eeeeee;
+  position: relative;
+  margin-bottom: 40px;
+  height: 465px;
+}
+
+#page div.slideshow div.slideshow-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  -webkit-backface-visibility: hidden;
+}
+
+#page div.slideshow figure {
+  margin: 40px 27px;
+  float: left;
+  display: inline;
+  width: 512px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transform: translate3d(0px,0px,0px);
+}
+
+/* Navigation */
+
+.container .row-fluid nav {
+  width: 256px;
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  overflow: auto;
+}
+
+nav i {
+  text-indent: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  -webkit-transition: all 1s linear;
+  -webkit-transform: translateZ(0);
+  overflow: hidden;
+}
+
+nav a,
+nav a:hover {
+  text-decoration: none;
+  color: #999999;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  margin: 0;
+  padding: 7px;
+  display: block;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+nav a.active {
+  color: #ffffff;
+  background-color: rgba(0, 136, 204, 1);
+  -webkit-transition: all .2s linear;
+}
+
+nav>ul>li>a,
+nav>ul>li>a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+nav ul ul {
+  -moz-box-shadow: inset 0px 5px 10px 0px #080808;
+  -webkit-box-shadow: inset 0px 5px 10px 0px #080808;
+  -o-box-shadow: inset 0px 5px 10px 0px #080808;
+  box-shadow: inset 0px 5px 10px 0px #080808, inset 0px -5px 10px 0px #080808;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#080808, Direction=180, Strength=10);
+  background-color: #111111;
+}
+
+nav ul ul ul {
+  background-color: #000000;
+}
+
+#toc li.active a {
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  background-color: #0088cc !important;
+}
+
+nav>ul>li>a { text-indent: 0px; }
+nav>ul>li>ul>li>a { text-indent: 0px; }
+nav>ul>li>ul>li>ul>li>a { text-indent: 25px; }
+nav>ul>li>ul>li>ul>li>ul>li>a { text-indent: 50px; }
+
+/* Burger */
+
+#burger {
+  width: 55px;
+  height: 55px;
+  background-image: url('../img/burger.png');
+  background-size: 100%;
+  position: absolute;
+  -webkit-transform: translate3d(10px,10px,0px);
+  z-index: 2;
+  opacity: 0;
+}
+
+#burger:active {
+  background-color: #eec51f;
+}
+
+/* Layouts */
+
+/* Horizontal iPad */
+@media (width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+  #page {
+    width: 768px;
+    height: 748px; /* 768 - statusbar height */
+    margin: 0;
+  }
+  .row-fluid {
+    position: static;
+    width: 1024px;
+  }
+  .row-fluid nav.span3 {
+    width: 256px;
+    margin: 0;
+  }
+  #page header {
+    height: 748px; /* 768 - statusbar height */
+  }
+  #page p.publisher {
+    font-size: 30px;
+    line-height: 75px;
+    height: 75px;
+  }
+  #page p.author {
+    font-size: 30px;
+    line-height: 75px;
+    padding-top: 15px;
+  }
+  #page h1 {
+    font-size: 75px;
+    line-height: 75px;
+    padding-bottom: 15px;
+  }
+  #page .logo {
+    height: 418px; /* 768 - 300 - 30 - 20 (statusbar height) */
+  }
+}
+
+/* Vertical iPad */
+@media (width: 768px) {
+
+  body,
+  .container {
+    width: 768px;
+    height: 1004px;
+    overflow: hidden;
+  }
+  #page {
+    width: 768px;
+    height: 1004px; /* 1024 - statusbar height */
+    margin: 0;
+  }
+  .row-fluid {
+    position: absolute;
+    width: 1024px;
+    -webkit-transform: translate3d(-256px,0px,0px);
+  }
+  #page header {
+    height: 1004px; /* 1024 - statusbar height */
+  }
+  #page p.publisher {
+    font-size: 50px;
+    line-height: 100px;
+    height: 100px;
+  }
+  #page p.author {
+    font-size: 50px;
+    line-height: 100px;
+    padding-top: 25px;
+  }
+  #page h1 {
+    font-size: 100px;
+    line-height: 100px;
+    padding-bottom: 25px;
+  }
+  #page .logo {
+    height: 454px; /* 1024 - 500 - 50 - 20 (statusbar height) */
+  }
+  #burger {
+    opacity: 1;
+  }
+}
