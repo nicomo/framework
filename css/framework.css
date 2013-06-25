@@ -23,6 +23,17 @@ html, body, .container, .row-fluid, #page {
   margin: 0;
 }
 
+#page p, #page blockquote {
+  word-break: break-word; /* hyphenation */
+  -webkit-hyphens: auto; /* hyphenation */
+  -webkit-hyphenate-before: 2; /* hyphenation : minimum number of letters before break */
+  -webkit-hyphenate-after: 3; /* hyphenation : minimum number of letters after break */
+  hyphenate-lines: 3;  /* hyphenation : max numer of consecutive lines w/ hyphenation */
+  -webkit-font-feature-settings: "liga", "dlig"; /* ligature */
+  font-feature-settings: "liga", "dlig";
+  text-align: justify;
+}
+
 #page section>* {
   padding: 0 75px;
 }
