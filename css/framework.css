@@ -149,6 +149,51 @@ html, body, .container, .row-fluid, #page {
   line-height: 30px;
 }
 
+/* Popover */
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  -webkit-backface-visibility: hidden;
+}
+
+.overlay figure {
+  width: 518px;
+  border: #ddd solid 3px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -259px;
+  margin-top: -259px;
+}
+
+.overlay figcaption,
+#page .slideshow figcaption {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 12px;
+}
+
+.overlay img {
+  border-radius: 3px 3px 0 0;
+}
+
+#page .pop {
+  background: #ddd;
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+  cursor: help;
+}
+
 /* Backmatter */
 
 #page #backmatter {
