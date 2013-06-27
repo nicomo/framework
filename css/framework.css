@@ -129,6 +129,11 @@ html, body, .container, .row-fluid, #page {
 #page div.clearfix figure.portrait {
   margin-left: 0;
 }
+#page figure.portrait {
+  width: 309px;
+  float: left;
+  margin-right: 40px;
+}
 
 #page video {
   width: 618px;
