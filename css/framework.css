@@ -260,6 +260,23 @@ html, body, .container, .row-fluid, #page {
   -webkit-transform: translate3d(0px,0px,0px);
 }
 
+#page div.slideshow img {
+  height: 365px;
+}
+
+#page div.slideshow.portrait div.slideshow-wrap {
+  padding: 0 152px;
+}
+
+#page div.slideshow.portrait figure {
+  margin: 40px 77px;
+  width: 309px;
+}
+
+#page div.slideshow.portrait img {
+  height: 463px;
+}
+
 /* Navigation */
 
 .container .row-fluid nav {

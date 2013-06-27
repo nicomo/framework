@@ -11,7 +11,7 @@
       var IMG_WIDTH = wrap.find('figure').first().outerWidth(true);
       var speed = 600;
 
-      slideshow.css('height', getMaxHeight(wrap.find('figcaption')) + 365 + 80);
+      slideshow.css('height', getMaxHeight(wrap.find('figure')) + 80);
       wrap.css('width', maxImages * IMG_WIDTH);
 
       wrap.swipe( {
