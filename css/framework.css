@@ -126,6 +126,9 @@ html, body, .container, .row-fluid, #page {
   outline: solid 1px #ddd;
   background: white;
 }
+#page div.clearfix figure.portrait {
+  margin-left: 0;
+}
 
 #page video {
   width: 618px;
