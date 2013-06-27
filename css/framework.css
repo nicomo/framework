@@ -218,8 +218,8 @@ html, body, .container, .row-fluid, #page {
 
 /* End of page fixes */
 
-#page section p:last-child,
-#page section ul:last-child {
+#page section>p:last-child,
+#page section>ul:last-child {
   padding-bottom: 80px;
   margin-bottom: 0px;
 }
