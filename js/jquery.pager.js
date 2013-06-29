@@ -131,6 +131,7 @@
 									poped = true;
 									$('body').append('<div class="overlay"></div>');
 									$('.overlay').append($(this).attr('data-content'));
+									$('.overlay>*').append('<button class="close"></button>');
 									$('.overlay').on({'touchstart' : function(){
 										$(this).remove();
 										poped = false;
@@ -177,6 +178,7 @@
 									poped = true;
 									$('body').append('<div class="overlay"></div>');
 									$('.overlay').append($(this).attr('data-content'));
+									$('.overlay>*').append('<button class="close"></button>');
 									$('.overlay').on({'touchstart' : function(){
 										$(this).remove();
 										poped = false;
