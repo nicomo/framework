@@ -194,6 +194,17 @@ html, body, .container, .row-fluid, #page {
   border-radius: 3px 3px 0 0;
 }
 
+.overlay button.close {
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/close.png');
+  background-size: 100%;
+  position: absolute;
+  top: -21px;
+  right: -21px;
+  opacity: 1;
+}
+
 #page .pop {
   background: #ddd;
   padding: 3px 6px;
