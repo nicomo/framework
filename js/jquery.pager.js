@@ -101,7 +101,7 @@
 				if (isActivated) { // loading state
 
 					var cursec = $('section');
-					var i = parseInt($('section').attr('class'));
+					var i = parseInt($('section').attr('id').substr(7));
 					var next = i-1;
 
 					if (next >= 0) {
@@ -121,7 +121,7 @@
 									position: 'absolute',
 									height: 80
 								});
-								$('.wrap').append('<section class="'+next+'">'+html+'</section>');
+								$('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
 								$('section').css('opacity', 0);
 								$('.pop').append('&nbsp;<i class="icon-eye-open"></i>');
 
@@ -154,7 +154,7 @@
 				if (isActivated2) { // loading state
 
 					var cursec = $('section');
-					var i = parseInt($('section').attr('class'));
+					var i = parseInt($('section').attr('id').substr(7));
 					var next = i+1;
 
 					if (next <= $('nav>ul>li>ul>li').size()) {
@@ -168,7 +168,7 @@
 							$(this).remove();
 							$('<section>').load(next+'.html', function() {
 								var html = $(this).html();
-								$('.wrap').append('<section class="'+next+'">'+html+'</section>');
+								$('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
 								$('section').css('opacity', 0);
 								$('.pop').append('&nbsp;<i class="icon-eye-open"></i>');
 

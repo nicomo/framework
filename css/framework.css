@@ -129,6 +129,11 @@ html, body, .container, .row-fluid, #page {
 #page div.clearfix figure.portrait {
   margin-left: 0;
 }
+#page figure.portrait {
+  width: 309px;
+  float: left;
+  margin-right: 40px;
+}
 
 #page video {
   width: 618px;
@@ -174,7 +179,7 @@ html, body, .container, .row-fluid, #page {
   left: 50%;
   top: 50%;
   margin-left: -259px;
-  margin-top: -259px;
+  margin-top: -172px;
 }
 
 .overlay figcaption,
@@ -187,6 +192,17 @@ html, body, .container, .row-fluid, #page {
 
 .overlay img {
   border-radius: 3px 3px 0 0;
+}
+
+.overlay button.close {
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/close.png');
+  background-size: 100%;
+  position: absolute;
+  top: -21px;
+  right: -21px;
+  opacity: 1;
 }
 
 #page .pop {
@@ -258,6 +274,23 @@ html, body, .container, .row-fluid, #page {
   -webkit-transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-out;
   -webkit-transform: translate3d(0px,0px,0px);
+}
+
+#page div.slideshow img {
+  height: 365px;
+}
+
+#page div.slideshow.portrait div.slideshow-wrap {
+  padding: 0 152px;
+}
+
+#page div.slideshow.portrait figure {
+  margin: 40px 77px;
+  width: 309px;
+}
+
+#page div.slideshow.portrait img {
+  height: 463px;
 }
 
 /* Navigation */
