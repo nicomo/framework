@@ -305,11 +305,11 @@ html, body, .container, .row-fluid, #page {
 }
 
 #page div.slideshow.portrait div.slideshow-wrap {
-  padding: 0 152px;
+  padding: 0 202px;
 }
 
 #page div.slideshow.portrait figure {
-  margin: 40px 77px;
+  margin: 40px 27px;
   width: 309px;
 }
 
