@@ -170,7 +170,6 @@ html, body, .container, .row-fluid, #page {
 }
 
 .overlay figure {
-  width: 518px;
   border: #ddd solid 3px;
   background: white;
   border-radius: 5px;
@@ -178,8 +177,11 @@ html, body, .container, .row-fluid, #page {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -259px;
-  margin-top: -172px;
+  width: 512px;
+}
+
+.overlay figure.portrait {
+  width: 309px;
 }
 
 .overlay figcaption,
@@ -190,8 +192,30 @@ html, body, .container, .row-fluid, #page {
   padding: 12px;
 }
 
+.overlay p {
+  border: #ddd solid 3px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 12px;
+  width: 512px;
+}
+
 .overlay img {
   border-radius: 3px 3px 0 0;
+  width: 512px;
+  height: 365px;
+}
+
+.overlay figure.portrait img {
+  width: 309px;
+  height: 463px;
 }
 
 .overlay button.close {
