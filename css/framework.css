@@ -355,7 +355,8 @@ nav a:hover {
   font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap
+  white-space: nowrap;
+  line-height: 25px;
 }
 
 nav a.active {
