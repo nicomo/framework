@@ -192,6 +192,10 @@ html, body, .container, .row-fluid, #page {
   padding: 12px;
 }
 
+#page .slideshow figcaption {
+  height: 42px;
+}
+
 .overlay p {
   border: #ddd solid 3px;
   background: white;
