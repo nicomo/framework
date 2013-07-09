@@ -192,6 +192,10 @@ html, body, .container, .row-fluid, #page {
   padding: 12px;
 }
 
+#page .slideshow figcaption {
+  height: 42px;
+}
+
 .overlay p {
   border: #ddd solid 3px;
   background: white;
@@ -315,6 +319,7 @@ button.pinterest {
   -webkit-transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-out;
   -webkit-transform: translate3d(0px,0px,0px);
+  -webkit-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.3);
 }
 
 #page div.slideshow img {
@@ -368,7 +373,8 @@ nav a:hover {
   font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap
+  white-space: nowrap;
+  line-height: 25px;
 }
 
 nav a.active {
