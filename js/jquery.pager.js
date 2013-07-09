@@ -91,13 +91,6 @@
 
 			}).on('touchend', function(ev) {
 
-				function updateMenu() {
-					$("nav>ul>li>ul>li>ul").css('max-height', 0);
-					$("nav a").removeClass('active');
-					$("nav>ul>li>ul>li:nth-child("+next+")>a").addClass('active');
-					$("nav>ul>li>ul>li:nth-child("+next+")>ul").css('max-height', 300);
-				}
-
 				if (isActivated) { // loading state
 
 					var cursec = $('section');
@@ -123,29 +116,13 @@
 								});
 								$('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
 								$('section').css('opacity', 0);
-								$('.pop').append('&nbsp;<i class="icon-eye-open"></i>');
-
-								var poped = false;
-								$('.pop').click(function() {
-									if (! poped) {
-									poped = true;
-									$('body').append('<div class="overlay"></div>');
-									$('.overlay').append($(this).attr('data-content'));
-									$('.overlay>*').append('<button class="close"></button>');
-									$('.overlay>*').css('margin-left', - $('.overlay>*').outerWidth()/2);
-									$('.overlay>*').css('margin-top', - $('.overlay>*').outerHeight()/2);
-									$('.overlay').on({'touchstart' : function(){
-										$(this).remove();
-										poped = false;
-									}});
-									}
-								});
-
+								popify();
+								pinify();
 								$(".slideshow").slideshow();
 								e.scrollTop($('.wrap').outerHeight() - $(document).height());
 								$('section').transition({opacity: 1}, 1000, function() {
 									isLoading = false;
-									updateMenu();
+									updateMenu(next);
 								});
 							});
 						});
@@ -172,29 +149,13 @@
 								var html = $(this).html();
 								$('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
 								$('section').css('opacity', 0);
-								$('.pop').append('&nbsp;<i class="icon-eye-open"></i>');
-
-								var poped = false;
-								$('.pop').click(function() {
-									if (! poped) {
-									poped = true;
-									$('body').append('<div class="overlay"></div>');
-									$('.overlay').append($(this).attr('data-content'));
-									$('.overlay>*').append('<button class="close"></button>');
-									$('.overlay>*').css('margin-left', - $('.overlay>*').outerWidth()/2);
-									$('.overlay>*').css('margin-top', - $('.overlay>*').outerHeight()/2);
-									$('.overlay').on({'touchstart' : function(){
-										$(this).remove();
-										poped = false;
-									}});
-									}
-								});
-
+								popify();
+								pinify();
 								$(".slideshow").slideshow();
 								e.scrollTop(0);
 								$('section').transition({opacity: 1}, 1000, function() {
 									isLoading2 = false;
-									updateMenu();
+									updateMenu(next);
 								});
 							});
 						});
