@@ -59,7 +59,7 @@ function pinify() {
   });
 }
 
-function loadpage(next) {
+function loadpage(i) {
   if (isLoading) { // if is already loading -> do nothing
     return true;
   }
@@ -67,23 +67,38 @@ function loadpage(next) {
     hideMenu();
     menushown = false;
   }
+  $('.ptr').css('opacity', 0);
   var cursec = $('section');
   cursec.transition({opacity: 0}, 500, function() {
     $(this).remove();
-    $('<section>').load(next+'.html', function() {
+    $('<section>').load(i+'.html', function() {
       var html = $(this).html();
-      $('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
+      $('.wrap').append('<section id="chapter'+i+'">'+html+'</section>');
       $('section').css('opacity', 0);
       popify();
       pinify();
       $(".slideshow").slideshow();
       $('.scrollable').scrollTop(0);
+      updatePtr(i);
       $('section').transition({opacity: 1}, 500, function() {
         isLoading = false;
-        updateMenu(next);
+        updateMenu(i);
       });
     });
   });
+}
+
+function updatePtr(i) {
+  if (i == 0) { $('.ptr.top').hide(); } else { $('.ptr.top').show(); }
+  if (i == $('nav>ul>li>ul>li').size()) { $('.ptr.bottom').hide(); } else { $('.ptr.bottom').show(); }
+  $('.ptr.bottom>.chapternumber').html('Suivant: Chapitre ' + (i+1));
+  $('.ptr.bottom>.chaptername').html($('nav>ul>li>ul>li:nth-child('+(i+1)+')>a').html());
+  $('.ptr.top>.chapternumber').html('Précédant: Chapitre ' + (i-1));
+  $('.ptr.top>.chaptername').html($('nav>ul>li>ul>li:nth-child('+(i-1)+')>a').html());
+  if (i == 1) {
+    $('.ptr.top>.chapternumber').html('Précédant: Couverture');
+    $('.ptr.top>.chaptername').html($('nav>ul>li>a').html());
+  }
 }
 
 $(function() {
@@ -94,18 +109,20 @@ $(function() {
 
   $('<section>').load('0.html', function() {
     $('.wrap').append('<section id="chapter0">'+$(this).html()+'</section>');
+    updatePtr(0);
   });
 
   $('nav>ul>li>a').click(function() {
     loadpage(0);
   });
 
-  $('nav>ul>li>ul>li>a').click(function() {
+  $('nav>ul>li>ul>li').click(function() {
     var next = parseInt($(this).index())+1;
     loadpage(next);
   });
 
   $('#burger').click(function() {
+    $('.ptr').css('opacity', 0);
     if (menushown) {
       hideMenu();
       menushown = false;
@@ -116,6 +133,7 @@ $(function() {
   });
 
   $(window).bind('orientationchange', function(e) {
+    $('.ptr').css('opacity', 0);
     if (window.orientation == 90 || window.orientation == -90) { // horizontal
       $('.row-fluid').css("-webkit-transform", "translate3d(0px,0px,0px)");
       $('#burger').css("-webkit-transform", "translate3d(266px,10px,0px)");
