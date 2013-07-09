@@ -1,3 +1,6 @@
+var menushown = false;
+var isLoading = false;
+
 function updateMenu(next) {
   $("nav>ul>li>ul>li>ul").css('max-height', 0);
   $("nav a").removeClass('active');
@@ -56,9 +59,34 @@ function pinify() {
   });
 }
 
-$(function() {
+function loadpage(next) {
+  if (isLoading) { // if is already loading -> do nothing
+    return true;
+  }
+  if (menushown) {
+    hideMenu();
+    menushown = false;
+  }
+  var cursec = $('section');
+  cursec.transition({opacity: 0}, 500, function() {
+    $(this).remove();
+    $('<section>').load(next+'.html', function() {
+      var html = $(this).html();
+      $('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
+      $('section').css('opacity', 0);
+      popify();
+      pinify();
+      $(".slideshow").slideshow();
+      $('.scrollable').scrollTop(0);
+      $('section').transition({opacity: 1}, 500, function() {
+        isLoading = false;
+        updateMenu(next);
+      });
+    });
+  });
+}
 
-  var menushown = false;
+$(function() {
 
   $("nav>ul>li>ul>li>ul").css('max-height', 0);
 
@@ -68,33 +96,13 @@ $(function() {
     $('.wrap').append('<section id="chapter0">'+$(this).html()+'</section>');
   });
 
-  var isLoading = false;
-  $('nav>ul>li>ul>li').click(function() {
-    if (isLoading) { // if is already loading -> do nothing
-      return true;
-    }
-    if (menushown) {
-      hideMenu();
-      menushown = false;
-    }
+  $('nav>ul>li>a').click(function() {
+    loadpage(0);
+  });
+
+  $('nav>ul>li>ul>li>a').click(function() {
     var next = parseInt($(this).index())+1;
-    var cursec = $('section');
-    cursec.transition({opacity: 0}, 500, function() {
-      $(this).remove();
-      $('<section>').load(next+'.html', function() {
-        var html = $(this).html();
-        $('.wrap').append('<section id="chapter'+next+'">'+html+'</section>');
-        $('section').css('opacity', 0);
-        popify();
-        pinify();
-        $(".slideshow").slideshow();
-        $('.scrollable').scrollTop(0);
-        $('section').transition({opacity: 1}, 500, function() {
-          isLoading = false;
-          updateMenu(next);
-        });
-      });
-    });
+    loadpage(next);
   });
 
   $('#burger').click(function() {
