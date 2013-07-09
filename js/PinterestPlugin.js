@@ -7,15 +7,15 @@
   Pinterest.prototype = {
 
     initPin: function(clientID) {
-        cordova.exec(null, null, "PinterestPlugin", "initPin", [clientID]);
+      cordova.exec(null, null, "PinterestPlugin", "initPin", [clientID]);
     },
 
     canPin: function(callback) {
-        cordova.exec(callback, null, "PinterestPlugin", "canPin", []);
+      cordova.exec(callback, null, "PinterestPlugin", "canPin", []);
     },
 
     composePin: function(imageURL, sourceURL, descriptionText) {
-        cordova.exec(null, null, "PinterestPlugin", "composePin", [imageURL, sourceURL, descriptionText]);
+      cordova.exec(null, null, "PinterestPlugin", "composePin", [imageURL, sourceURL, descriptionText]);
     },
 
   };
