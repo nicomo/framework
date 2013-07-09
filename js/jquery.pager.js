@@ -37,8 +37,9 @@
 					return true;
 				}
 
-				if (-top >= 0) { // release state
+				if (-top > 0) { // release state
 					isActivated = true;
+					$('.ptr.top').css({'opacity': 1, '-webkit-transform': 'translate3d(0px,0px,0px)'});
 				} else if (top > -0) { // pull state
 					isActivated = false;
 				}
@@ -51,13 +52,12 @@
 					return true;
 				}
 
-				// compute viewport height
-				var vph = $(document).height();
-				// compute wraper height
-				var wh = $('.wrap').height();
+				var vph = $(document).height(); // compute viewport height
+				var wh = $('.wrap').height(); // compute wraper height
 
-				if (top >= 0 + wh - vph) { // release state
+				if (top > 0 + wh - vph) { // release state
 					isActivated2 = true;
+					$('.ptr.bottom').css({'opacity': 1, '-webkit-transform': 'translate3d(0px,0px,0px)'});
 				} else if (top < 0 + wh - vph) { // pull state
 					isActivated2 = false;
 				}
@@ -69,8 +69,6 @@
 			}).on('touchend', function(ev) {
 
 				if (isActivated) { // loading state
-
-					$('.ptr.top').css({'opacity': 1, '-webkit-transform': 'translate3d(0px,0px,0px)'});
 
 					$('.ptr.top').click(function() {
 						isActivated = false;
@@ -87,7 +85,7 @@
 								popify();
 								pinify();
 								$(".slideshow").slideshow();
-								e.scrollTop($('.wrap').height() - $(document).height());
+								e.scrollTop($('.wrap').outerHeight() - $(document).outerHeight());
 								updatePtr(next);
 								$('section').transition({opacity: 1}, 1000, function() {
 									updateMenu(next);
@@ -99,8 +97,6 @@
 				}
 
 				if (isActivated2) { // loading state
-
-					$('.ptr.bottom').css({'opacity': 1, '-webkit-transform': 'translate3d(0px,0px,0px)'});
 
 					$('.ptr.bottom').click(function() {
 						isActivated2 = false;
