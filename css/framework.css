@@ -145,6 +145,16 @@ html, body, .container, .row-fluid, #page {
   line-height: 21px;
 }
 
+#page section>figure img {
+  width: 618px;
+  height: 412px;
+}
+
+#page section figure.portrait img {
+  width: 309px;
+  height: 463px;
+}
+
 #page blockquote {
   margin-bottom: 40px;
 }
