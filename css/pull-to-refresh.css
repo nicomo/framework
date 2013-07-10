@@ -8,7 +8,6 @@
 
 .scrollable .wrap {
 	min-height: 100%;
-	/*padding-bottom: 1px;*/
 	-webkit-transform: translateZ(0);
 	position: static;
 	background: transparent;
@@ -18,7 +17,6 @@
 .ptr {
 	width: 768px; 
 	position: absolute; 
-	right: 0px; 
 	z-index: 99;
 	background: rgba(0,0,0,.75);
 	line-height: 20px;
@@ -31,6 +29,7 @@
 	background-repeat: no-repeat;
 	background-position: 236px 50%;
 	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	right: 0;
 }
 
 .ptr .chapternumber {

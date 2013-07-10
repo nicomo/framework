@@ -15,8 +15,8 @@
 		return this.each(function() {
 
 			var e = $(this);
-			$('.container').prepend(htmltop);
-			$('.container').append(htmlbottom);
+			$('body').prepend(htmltop);
+			$('body').append(htmlbottom);
 
 			$('.ptr.top').click(function() {
 				if ($('.ptr.top').css('opacity') == 1) {
@@ -72,7 +72,7 @@
 
 				var top = e.scrollTop();
 
-				if (top <= 0) {
+				if (top <= 0 && menushown == false) {
 					$('.ptr.top').css({'opacity': 1, '-webkit-transform': 'translate3d(0px,0px,0px)'});
 				} else {
 					$('.ptr.top').css({'opacity': 0, '-webkit-transform': 'translate3d(0px,0px,0px)'});
@@ -81,7 +81,7 @@
 				var vph = $(document).height(); // compute viewport height
 				var wh = $('.wrap').height(); // compute wraper height
 
-				if (top >= 0 + wh - vph) {
+				if (top >= 0 + wh - vph && menushown == false) {
 					$('.ptr.bottom').css({'opacity': 1, '-webkit-transform': 'translate3d(0px,0px,0px)'});
 				} else {
 					$('.ptr.bottom').css({'opacity': 0, '-webkit-transform': 'translate3d(0px,0px,0px)'});
