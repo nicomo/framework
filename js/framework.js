@@ -91,12 +91,12 @@ function loadpage(i) {
 function updatePtr(i) {
   if (i == 0) { $('.ptr.top').hide(); } else { $('.ptr.top').show(); }
   if (i == $('nav>ul>li>ul>li').size()) { $('.ptr.bottom').hide(); } else { $('.ptr.bottom').show(); }
-  $('.ptr.bottom>.chapternumber').html('Suivant: Chapitre ' + (i+1));
+  $('.ptr.bottom>.chapternumber').html('Passer au chapitre suivant');
   $('.ptr.bottom>.chaptername').html($('nav>ul>li>ul>li:nth-child('+(i+1)+')>a').html());
-  $('.ptr.top>.chapternumber').html('Précédant: Chapitre ' + (i-1));
+  $('.ptr.top>.chapternumber').html('Revenir au chapitre précédent');
   $('.ptr.top>.chaptername').html($('nav>ul>li>ul>li:nth-child('+(i-1)+')>a').html());
   if (i == 1) {
-    $('.ptr.top>.chapternumber').html('Précédant: Couverture');
+    $('.ptr.top>.chapternumber').html('Couverture');
     $('.ptr.top>.chaptername').html($('nav>ul>li>a').html());
   }
 }
