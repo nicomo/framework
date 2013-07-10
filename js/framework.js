@@ -13,6 +13,8 @@ function showMenu() {
   $('.row-fluid').css("-webkit-transform", "translate3d(0px,0px,0px)");
   $('#burger').css("-webkit-transition-duration", "0.25s");
   $('#burger').css("-webkit-transform", "translate3d(266px,10px,0px)");
+  $('.ptr').css("-webkit-transition-duration", "0.25s");
+  $('.ptr').css("-webkit-transform", "translate3d(256px,0px,0px)");
 }
 
 function hideMenu() {
@@ -20,6 +22,8 @@ function hideMenu() {
   $('.row-fluid').css("-webkit-transform", "translate3d(-256px,0px,0px)");
   $('#burger').css("-webkit-transition-duration", "0.25s");
   $('#burger').css("-webkit-transform", "translate3d(10px,10px,0px)");
+  $('.ptr').css("-webkit-transition-duration", "0.25s");
+  $('.ptr').css("-webkit-transform", "translate3d(0px,0px,0px)");
 }
 
 function popify() {
@@ -139,10 +143,12 @@ $(function() {
     if (window.orientation == 90 || window.orientation == -90) { // horizontal
       $('.row-fluid').css("-webkit-transform", "translate3d(0px,0px,0px)");
       $('#burger').css("-webkit-transform", "translate3d(266px,10px,0px)");
+      $('.ptr').css("-webkit-transform", "translate3d(256px,0px,0px)");
       menushown = false;
     } else { // vertical
       $('.row-fluid').css("-webkit-transform", "translate3d(-256px,0px,0px)");
       $('#burger').css("-webkit-transform", "translate3d(10px,10px,0px)");
+      $('.ptr').css("-webkit-transform", "translate3d(0px,0px,0px)");
       menushown = false;
     }
   });
