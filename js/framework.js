@@ -110,6 +110,7 @@ $(function() {
   $('<section>').load('0.html', function() {
     $('.wrap').append('<section id="chapter0">'+$(this).html()+'</section>');
     updatePtr(0);
+    $('.ptr').css('opacity', 1);
   });
 
   $('nav>ul>li>a').click(function() {
