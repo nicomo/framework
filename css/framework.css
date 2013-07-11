@@ -380,19 +380,20 @@ nav a:hover {
   color: #999999;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   margin: 0;
-  padding: 7px;
   display: block;
   font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 25px;
+  line-height: 40px;
+  padding-left: 10px;
 }
 
 nav a.active {
   color: #ffffff;
   background-color: rgba(0, 136, 204, 1);
   -webkit-transition: all .2s linear;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
 
 nav>ul>li>a,
@@ -417,12 +418,6 @@ nav ul ul {
 
 nav ul ul ul {
   background-color: #000000;
-}
-
-#toc li.active a {
-  color: #ffffff;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15);
-  background-color: #0088cc !important;
 }
 
 nav>ul>li>a { text-indent: 0px; }
