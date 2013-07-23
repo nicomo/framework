@@ -541,3 +541,50 @@ nav>ul>li>ul>li>ul>li>ul>li>a { text-indent: 50px; }
     opacity: 1;
   }
 }
+
+/* Vertical Galaxy Note 8 */
+@media (width: 800px) {
+  body,
+  .container {
+    width: 800px;
+    height: 1247px;
+    overflow: hidden;
+  }
+  .ptr {
+    width: 800px;
+  }
+  #page {
+    width: 800px;
+    height: 1247px; /* 1024 - statusbar height */
+    margin: 0;
+  }
+  .row-fluid {
+    position: absolute;
+    width: 1056px;
+    -webkit-transform: translate3d(-256px,0px,0px);
+  }
+  #page header {
+    height: 1247px; /* 1024 - statusbar height */
+  }
+  #page p.publisher {
+    font-size: 50px;
+    line-height: 100px;
+    height: 100px;
+  }
+  #page p.author {
+    font-size: 50px;
+    line-height: 100px;
+    padding-top: 25px;
+  }
+  #page h1 {
+    font-size: 100px;
+    line-height: 100px;
+    padding-bottom: 25px;
+  }
+  #page .logo {
+    height: 454px; /* 1024 - 500 - 50 - 20 (statusbar height) */
+  }
+  #burger {
+    opacity: 1;
+  }
+}
