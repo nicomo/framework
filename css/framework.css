@@ -120,7 +120,8 @@ html, body, .container, .row-fluid, #page {
 }
 
 #page figure, #page video {
-  margin: 0 75px 40px 75px;
+  width: 618px;
+  margin: 0 auto 40px auto;
   padding: 0;
   text-align: center;
   outline: solid 1px #ddd;
@@ -138,6 +139,7 @@ html, body, .container, .row-fluid, #page {
 #page video {
   width: 618px;
   height: 348px;
+  display: block;
 }
 
 #page figcaption {
