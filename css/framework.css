@@ -560,6 +560,9 @@ nav>ul>li>ul>li>ul>li>ul>li>a { text-indent: 50px; }
     height: 1247px; /* 1024 - statusbar height */
     margin: 0;
   }
+  #page section {
+    height: 1247px; /* 1024 - statusbar height */
+  }
   .row-fluid {
     position: absolute;
     width: 1056px;
