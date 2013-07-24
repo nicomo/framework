@@ -561,7 +561,7 @@ nav>ul>li>ul>li>ul>li>ul>li>a { text-indent: 50px; }
     margin: 0;
   }
   #page section {
-    height: 1247px; /* 1024 - statusbar height */
+    min-height: 1247px; /* 1024 - statusbar height */
   }
   .row-fluid {
     position: absolute;
