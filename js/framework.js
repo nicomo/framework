@@ -64,6 +64,15 @@ function pinify() {
   });
 }
 
+function inappbrowserify() {
+  $('a[target^="_"]').click(function(e) {
+    e.preventDefault();
+    var url = $(this).attr("href");
+    var target = $(this).attr("target");
+    window.open(url, target);
+  });
+}
+
 function loadpage(i) {
   if (isLoading) { // if is already loading -> do nothing
     return true;
@@ -82,6 +91,7 @@ function loadpage(i) {
       $('section').css('opacity', 0);
       popify();
       pinify();
+      inappbrowserify();
       $(".slideshow").slideshow();
       $('.scrollable').scrollTop(0);
       updatePtr(i);
