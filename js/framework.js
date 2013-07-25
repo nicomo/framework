@@ -1,6 +1,14 @@
 var menushown = false;
 var isLoading = false;
 
+function isAndroid() {
+  return navigator.userAgent.indexOf("Android") > 0;
+}
+
+function isiOS() {
+  return (navigator.userAgent.indexOf("iPhone") > 0 || navigator.userAgent.indexOf("iPad") > 0 || navigator.userAgent.indexOf("iPod") > 0); 
+}
+
 function updateMenu(next) {
   $("nav>ul>li>ul>li>ul").css('max-height', 0);
   $("nav a").removeClass('active');
@@ -73,6 +81,11 @@ function inappbrowserify() {
   });
 }
 
+function hideorshow() {
+  if (isiOS()) { $('.ios-only').show(); };
+  if (isAndroid()) { $('.android-only').show(); };
+}
+
 function loadpage(i) {
   if (isLoading) { // if is already loading -> do nothing
     return true;
@@ -92,6 +105,7 @@ function loadpage(i) {
       popify();
       pinify();
       inappbrowserify();
+      hideorshow();
       $(".slideshow").slideshow();
       $('.scrollable').scrollTop(0);
       updatePtr(i);
