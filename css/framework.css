@@ -320,6 +320,14 @@ button.pinterest {
   padding: 25px 75px;
 }
 
+#page #backmatter form {
+  margin-bottom: 40px;
+}
+
+#page #backmatter form input {
+  font-size: 16px;
+}
+
 /* End of page fixes */
 
 #page section>p:last-child,
