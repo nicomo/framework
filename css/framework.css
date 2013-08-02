@@ -163,6 +163,7 @@ button {
 #page figcaption {
   padding: 13px;
   line-height: 21px;
+  font-size: 14px;
 }
 
 #page section>figure img {
