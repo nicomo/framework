@@ -178,11 +178,8 @@ button {
 
 #page blockquote {
   margin-bottom: 40px;
-}
-
-#page blockquote {
   font-size: 21px;
-  border-left-color: #ddd;
+  border-left: solid 5px #ddd;
   margin-left: 55px;
   padding-left: 15px !important;
   line-height: 30px;
