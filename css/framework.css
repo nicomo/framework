@@ -283,6 +283,23 @@ button.pinterest {
   border: none;
 }
 
+/* PDF */
+
+figure.pdf {
+  position: relative;
+}
+
+button.pdf {
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/pinterest.png');
+  background-size: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+}
+
 /* Backmatter */
 
 #page #backmatter {

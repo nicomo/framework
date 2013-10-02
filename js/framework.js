@@ -64,6 +64,14 @@ function pinify() {
   });
 }
 
+function sharify() {
+    $('figure.pdf').append('<button class="pdf"></div>');
+    $('button.pdf').click(function() {
+                          var imageName = $(this).parent().find('img').attr('src').replace('assets/img/', '');
+                          window.pinterest.triggerActionSheet(imageName);
+                          });
+}
+
 function loadpage(i) {
   if (isLoading) { // if is already loading -> do nothing
     return true;
@@ -82,6 +90,7 @@ function loadpage(i) {
       $('section').css('opacity', 0);
       popify();
       pinify();
+      sharify();
       $(".slideshow").slideshow();
       $('.scrollable').scrollTop(0);
       updatePtr(i);

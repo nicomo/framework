@@ -32,6 +32,7 @@
 							$('section').css('opacity', 0);
 							popify();
 							pinify();
+                            sharify();
 							$(".slideshow").slideshow();
 							e.scrollTop($('.wrap').outerHeight() - $(document).outerHeight());
 							updatePtr(next);
@@ -57,6 +58,7 @@
 							$('section').css('opacity', 0);
 							popify();
 							pinify();
+                            sharify();
 							$(".slideshow").slideshow();
 							e.scrollTop(0);
 							updatePtr(next);
