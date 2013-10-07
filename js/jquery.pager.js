@@ -33,6 +33,7 @@
 							popify();
 							pinify();
                             sharify();
+                            gotofy();
 							$(".slideshow").slideshow();
 							e.scrollTop($('.wrap').outerHeight() - $(document).outerHeight());
 							updatePtr(next);
@@ -59,6 +60,7 @@
 							popify();
 							pinify();
                             sharify();
+                            gotofy();
 							$(".slideshow").slideshow();
 							e.scrollTop(0);
 							updatePtr(next);
