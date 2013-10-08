@@ -62,7 +62,7 @@ button {
   padding: 0;
   margin: 0;
   background: #eeeeee;
-  height: 1004px;
+  max-height: 960px;
 }
 
 #page p.publisher {
@@ -82,7 +82,7 @@ button {
 }
 
 #page h1 {
-  font-size: 100px;
+  font-size: 80px;
   line-height: 100px;
   padding: 0 75px;
   margin: 0;
@@ -90,7 +90,7 @@ button {
 }
 
 #page .logo {
-  height: 504px; /* 1024 - 500 - 50 - 20 (statusbar height) */
+  height: 460px; /* 1024 - 500 - 75 - 64 (navigationbar height) */
 }
 
 /* Chapter title */
