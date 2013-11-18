@@ -63,6 +63,7 @@ button {
   margin: 0;
   background: #eeeeee;
   max-height: 960px;
+  position: relative;
 }
 
 #page p.publisher {
@@ -91,6 +92,24 @@ button {
 
 #page .logo {
   height: 460px; /* 1024 - 500 - 75 - 64 (navigationbar height) */
+}
+
+@-webkit-keyframes breathe {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#page .scrollup-hint {
+  height: 40px;
+  width: 40px;
+  background: url('../img/scrollup-hint.png');
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 auto;
+  margin-left: -20px;
+  -webkit-animation: breathe 1s 0s infinite alternate;
 }
 
 /* Chapter title */
